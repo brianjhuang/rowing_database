@@ -12,10 +12,6 @@ $Rank=$_POST['Rank'];
 
 
 <?php
-//$servername = "localhost";
-//$username = "username";
-//$password = "password";
-//$dbname = "myDB";
 // Create connection
 $con = mysqli_connect("localhost","root","","rowers");
 // Check connection
