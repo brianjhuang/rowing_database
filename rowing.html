@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html>
+<head>
+<title>
+Central Region
+</title>
+	<style type="text/css">
+
+		h1 {text-align:center;}
+		body {
+			background-color:lightblue;
+			background-image:url(central.png);
+			background-repeat:no-repeat;
+			background-position: 50% 0px;
+			
+		}
+		div {text-align:center;}
+		a {font-size:14;}
+		table {border: 3px solid black;}
+		table {color:blue;}
+		tr {background-color:yellow;} 
+		td {border: 3px dashed blue;}
+		tr:nth-child(even)
+		table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+	table {
+	border:2px solid black;
+	border-radius: 8px;
+	}
+		{
+			background-color: yellow;
+		}
+		tr:nth-child(odd)
+		{
+			background-color: orange;
+		}
+		
+	</style>
+</head>
+<body>
+
+<h1>Central Region</h1>
+<script type="text/javascript">
+tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+
+document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+}
+
+window.onload=function(){
+GetClock();
+setInterval(GetClock,1000);
+}
+</script>
+<div id="clockbox"></div>
+<br></br>
+<iframe width="420" height="345" src="https://youtube.com/embed/7SlUCRNYnLI">
+</iframe>
+</script>
+<br></br>
+<a href="FindRower.php">Find your Rower!</a>
+<br></br>
+<a href="FindLineups.php">Find your Lineup!</a>
+<br></br>
+<a href="Rowers.php">New Rower? Enter data here!</a>
+<br></br>
+<a href="Lineups.php">New Lineup? Enter data here!</a>
+</body>
+</html>
